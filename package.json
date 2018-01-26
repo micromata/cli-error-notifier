@@ -16,9 +16,9 @@
 		"node": ">=4"
 	},
 	"scripts": {
-		"test": "npm run eslint --silent && nyc ava",
+		"test": "npm run lint && nyc ava",
 		"lint": "eslint --cache --ignore-path .gitignore .",
-		"lint:fix": "npm run eslint --silent -- --fix",
+		"lint:fix": "npm run lint --silent -- --fix",
 		"release": "nsp check && standard-version --tag-prefix",
 		"release:patch": "npm run release --silent -- --release-as patch",
 		"release:minor": "npm run release --silent -- --release-as minor",

@@ -1,6 +1,10 @@
 import test from 'ava';
-import m from '.';
+import errorNotifier from './error-notifier';
 
-test('command', t => {
-	t.is(m('unicorns'), undefined);
+test('"wget unknown-host.xyz"', async t => {
+	await t.throws(errorNotifier('wget unknown-host.xyz'));
+});
+
+test('"wget baumeister.io"', async t => {
+	await t.notThrows(errorNotifier('wget baumeister.io'));
 });
