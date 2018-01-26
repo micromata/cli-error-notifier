@@ -68,12 +68,6 @@ $ onerror --help
     --icon,    -i   Can be any absolute path
     --sound,   -s   Use "mute" to disable default sound notification
 
-    Options are passed to the node-notifier CLI.
-    See https://github.com/mikaelbr/node-notifier-cli#usage
-
-    Detailed info about defaults can be found here:
-    https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
-
   Examples
     $ onerror "wget unknown-host.xyz"
     $ onerror "wget unknown-host.xyz" -s mute
