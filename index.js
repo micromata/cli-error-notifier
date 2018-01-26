@@ -13,9 +13,9 @@ module.exports = (command, flags) => {
 	notifierOpts.sound = /mute/i.test(notifierOpts.sound) ? false : notifierOpts.sound;
 
 	execa.shell(command, {env: {FORCE_COLOR: true}}).then(result => {
-		console.log(result.stdout);
+		console.log(result.stdout || result.stderr);
 	}).catch(err => {
-		console.log(err.stdout);
+		console.log(err.stdout || err.stderr);
 		notifier.notify(notifierOpts);
 		process.exit(err.code);
 	});
