@@ -18,7 +18,11 @@
 	"scripts": {
 		"test": "npm run eslint --silent && nyc ava",
 		"lint": "eslint --cache --ignore-path .gitignore .",
-		"lint:fix": "npm run eslint --silent -- --fix"
+		"lint:fix": "npm run eslint --silent -- --fix",
+		"release": "nsp check && standard-version --tag-prefix",
+		"release:patch": "npm run release --silent -- --release-as patch",
+		"release:minor": "npm run release --silent -- --release-as minor",
+		"release:major": "npm run release --silent -- --release-as major"
 	},
 	"files": [
 		"index.js",
@@ -46,7 +50,9 @@
 		"eslint-plugin-filenames": "^1.2.0",
 		"eslint-plugin-security": "^1.4.0",
 		"eslint-plugin-unicorn": "^3.0.1",
-		"nyc": "^11.0.0"
+		"nsp": "^3.1.0",
+		"nyc": "^11.0.0",
+		"standard-version": "^4.3.0"
 	},
 	"nyc": {
 		"reporter": [
