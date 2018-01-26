@@ -10,19 +10,19 @@
 		"url": "micromata.de"
 	},
 	"bin": {
-		"onerror": "bin/index.js"
+		"onerror": "cli.js"
 	},
 	"engines": {
 		"node": ">=4"
 	},
 	"scripts": {
-		"test": "xo && nyc ava",
-		"lint": "xo",
-		"lint:fix": "xo --fix"
+		"test": "npm run eslint --silent && nyc ava",
+		"lint": "eslint --cache --ignore-path .gitignore .",
+		"lint:fix": "npm run eslint --silent -- --fix"
 	},
 	"files": [
 		"index.js",
-		"bin"
+		"cli.js"
 	],
 	"keywords": [
 		"cli-app",
@@ -41,18 +41,17 @@
 	"devDependencies": {
 		"ava": "^0.20.0",
 		"codecov": "^2.2.0",
-		"nyc": "^11.0.0",
-		"xo": "^0.18.2"
+		"eslint": "^4.16.0",
+		"eslint-config-xo": "^0.19.0",
+		"eslint-plugin-filenames": "^1.2.0",
+		"eslint-plugin-security": "^1.4.0",
+		"eslint-plugin-unicorn": "^3.0.1",
+		"nyc": "^11.0.0"
 	},
 	"nyc": {
 		"reporter": [
 			"lcov",
 			"text"
 		]
-	},
-	"xo": {
-		"rules": {
-			"unicorn/no-process-exit": ["off"]
-		}
 	}
 }

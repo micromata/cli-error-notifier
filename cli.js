@@ -3,7 +3,7 @@
 const meow = require('meow');
 const logSymbols = require('log-symbols');
 
-const errorNotifier = require('../');
+const errorNotifier = require('./error-notifier');
 
 const cli = meow(`
 	Usage
@@ -34,13 +34,11 @@ const cli = meow(`
 	flags: {
 		title: {
 			type: 'string',
-			alias: 't',
-			default: 'An error occured'
+			alias: 't'
 		},
 		message: {
 			type: 'string',
-			alias: 'm',
-			default: 'Check your terminal for more information'
+			alias: 'm'
 		},
 		icon: {
 			type: 'string',
@@ -68,4 +66,11 @@ if (Object.keys(cli.flags).map(key => typeof cli.flags[key]).some(type => type =
 	cli.showHelp(2);
 }
 
-errorNotifier(cli.input[0], cli.flags);
+errorNotifier(cli.input[0], cli.flags)
+	.then(result => {
+		console.log(result.stdout || result.stderr);
+	})
+	.catch(error => {
+		console.log(error.stdout || error.stderr);
+		process.exit(error.code);
+	});
