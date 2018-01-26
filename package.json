@@ -16,7 +16,9 @@
 		"node": ">=4"
 	},
 	"scripts": {
-		"test": "xo && nyc ava"
+		"test": "xo && nyc ava",
+		"lint": "xo",
+		"lint:fix": "xo --fix"
 	},
 	"files": [
 		"index.js",
