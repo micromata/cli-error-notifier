@@ -31,7 +31,7 @@
 		"notify"
 	],
 	"dependencies": {
-		"chalk": "^2.3.0",
+		"execa": "^0.9.0",
 		"log-symbols": "^2.2.0",
 		"meow": "^3.7.0"
 	},

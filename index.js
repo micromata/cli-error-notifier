@@ -1,13 +1,12 @@
-const chalk = require('chalk');
+const execa = require('execa');
 
-module.exports = (input, opts) => {
-	opts = opts || {};
+module.exports = (command, flags) => {
+	flags = flags || {};
 
-	console.log(chalk.white('------------- DEBUG OUTPUT -------------'));
-	console.log(chalk.yellow('input:'));
-	console.dir(input);
-	console.log(chalk.yellow('opts:'));
-	console.dir(opts);
-	console.log(chalk.white('----------------------------------------'));
-	console.log('');
+	execa.shell(command, {env: {FORCE_COLOR: true}}).then(result => {
+		console.log(result.stdout);
+	}).catch(err => {
+		console.log(err.stdout);
+		process.exit(err.code);
+	});
 };
