@@ -2,6 +2,8 @@
 'use strict';
 const meow = require('meow');
 const logSymbols = require('log-symbols');
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
 
 const errorNotifier = require('./error-notifier');
 
@@ -50,6 +52,8 @@ const cli = meow(`
 		}
 	}
 });
+
+updateNotifier({pkg}).notify();
 
 if (cli.input.length !== 1) {
 	console.log(`\n${logSymbols.error} Invalid input. Please check the help below:`);

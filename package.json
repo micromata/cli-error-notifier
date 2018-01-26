@@ -40,7 +40,8 @@
 		"execa": "^0.9.0",
 		"log-symbols": "^2.2.0",
 		"meow": "^4.0.0",
-		"node-notifier": "^5.2.1"
+		"node-notifier": "^5.2.1",
+		"update-notifier": "^2.3.0"
 	},
 	"devDependencies": {
 		"ava": "^0.25.0",
