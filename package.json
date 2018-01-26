@@ -1,0 +1,50 @@
+{
+	"name": "cli-error-notifier",
+	"version": "0.0.0",
+	"description": "Send native notification if CLI apps fail",
+	"license": "MIT",
+	"repository": "micromata/cli-error-notifier",
+	"author": {
+		"name": "Michael Kühnel",
+		"email": "m.kuehnel@micromata.de",
+		"url": "micromata.de"
+	},
+	"bin": {
+		"onerror": "bin/index.js"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && nyc ava"
+	},
+	"files": [
+		"index.js",
+		"bin"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"error",
+		"error-handling",
+		"notifications",
+		"notify"
+	],
+	"dependencies": {
+		"chalk": "^2.3.0",
+		"log-symbols": "^2.2.0",
+		"meow": "^3.7.0"
+	},
+	"devDependencies": {
+		"ava": "^0.20.0",
+		"codecov": "^2.2.0",
+		"nyc": "^11.0.0",
+		"xo": "^0.18.2"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	}
+}
