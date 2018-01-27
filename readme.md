@@ -59,20 +59,28 @@ $ onerror --help
 
   Send native desktop notifications when CLI apps fail
 
-  Usage
-    $ onerror <command> [options]
+	Usage
+	  $ onerror <command> [options]
 
-  Options
-    --title,   -t   The title of the notification
-    --message, -m   The message body of the notification
-    --icon,    -i   Can be any absolute path
-    --sound,   -s   Use "mute" to disable default sound notification
+	Options
+	  --title,   -t   Sets the title of the notification.
+	                  Default: "An error has occured"
+	  --message, -m   Sets the message body of the notification.
+	                  Default: "Check the terminal for more information"
+	  --icon,    -i   Sets an icon. Can be any absolute path.
+	  --sound,   -s   Define which sound do use.
+	                  Use "mute" to disable default sound notification.
+	                  Options: Mute, Basso, Blow, Bottle, Frog, Funk, Glass, Hero,
+	                           Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink
+	                  Default: Bottle
+	  --version  -v   Shows the version number.
+	  --help     -h   Shows the help.
 
-  Examples
-    $ onerror "wget unknown-host.xyz"
-    $ onerror "wget unknown-host.xyz" -s mute
-    $ onerror "wget unknown-host.xyz" -t Error -m "My error message"
-    $ onerror "wget unknown-host.xyz"  -s Glass -i https://cdn.rawgit.com/npm/logos/31945b5c/npm%20square/n-64.png
+	Examples
+	  $ onerror "wget unknown-host.xyz"
+	  $ onerror "wget unknown-host.xyz" -s mute
+	  $ onerror "wget unknown-host.xyz" -t Error -m "My error message"
+	  $ onerror "wget unknown-host.xyz"  -s Glass -i https://cdn.rawgit.com/npm/logos/31945b5c/npm%20square/n-64.png
 ```
 
 ## Cross platform compatibility
