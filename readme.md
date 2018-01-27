@@ -46,8 +46,14 @@ It also works flawlessly together with [npm-run-all](https://github.com/mysticat
 
 ## Install
 
+To use it in your project:
 ```
-$ npm install --global cli-error-notifier
+$ npm i -D cli-error-notifier
+```
+
+To use it globally;
+```
+$ npm i -g cli-error-notifier
 ```
 
 *It requires Node.js (v4 or greater).*
