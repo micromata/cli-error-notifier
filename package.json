@@ -25,7 +25,7 @@
     "release:major": "npm run release --silent -- --release-as major"
   },
   "files": [
-    "index.js",
+    "error-notifier.js",
     "cli.js"
   ],
   "keywords": [
