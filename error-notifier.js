@@ -12,13 +12,9 @@ module.exports = (command, opts) => {
 	};
 	notifierOpts.sound = /mute/i.test(notifierOpts.sound) ? false : notifierOpts.sound;
 
-	return execa.shell(command, {env: {FORCE_COLOR: true}})
-		.then(result => {
-			return Promise.resolve(result);
-		})
-		.catch(err => {
-			notifier.notify(notifierOpts);
-			return Promise.reject(err);
-		});
-
+	return new Promise((resolve, reject) => {
+		execa.shell(command, {env: {FORCE_COLOR: true}})
+			.then(result => resolve(result))
+			.catch(err => notifier.notify(notifierOpts, () => reject(err)));
+	});
 };
