@@ -59,12 +59,7 @@ updateNotifier({pkg}).notify();
 
 if (cli.input.length !== 1) {
 	console.log(`\n${logSymbols.error} Invalid input. Please check the help below:`);
-	cli.showHelp(2);
-}
-
-if (typeof cli.input[0] !== 'string') {
-	console.log(`\n${logSymbols.error} Command needs to be a string, but got ${typeof cli.input[0]}. Please check the help below:`);
-	cli.showHelp(2);
+	cli.showHelp();
 }
 
 if (Object.keys(cli.flags).map(key => typeof cli.flags[key]).some(type => type === 'boolean')) {
