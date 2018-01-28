@@ -3,9 +3,9 @@
 const meow = require('meow');
 const logSymbols = require('log-symbols');
 const updateNotifier = require('update-notifier');
-const pkg = require('./package.json');
 
-const errorNotifier = require('./error-notifier');
+const pkg = require('./package.json');
+const errorNotifier = require('./lib/error-notifier');
 
 const cli = meow(`
 	Usage
