@@ -5,14 +5,14 @@ test('"Unknown command"', async t => {
 	const result = await t.throws(errorNotifier('Hej'));
 	t.is(result.stdout, '');
 	t.is(result.code, 127);
-	t.regex(result.stderr, /Hej: command not found/);
+	t.regex(result.stderr, /Hej:.+not found/);
 });
 
 test('"Command which exits with exit code other than 1"', async t => {
 	const result = await t.throws(errorNotifier('tar'));
 	t.is(result.stdout, '');
-	t.is(result.code, 1);
-	t.regex(result.stderr, /tar: Must specify one of -c, -r, -t, -u, -x/);
+	t.not(result.code, 0);
+	t.regex(result.stderr, /tar:.+must specify one of/i);
 });
 
 test('"Command which exits properly with exit code 0"', async t => {
