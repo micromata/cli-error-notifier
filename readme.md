@@ -74,7 +74,7 @@ $ onerror --help
 	  --message, -m   Sets the message body of the notification.
 	                  Default: "Check the terminal for more information"
 	  --icon,    -i   Sets an icon. Can be any absolute path.
-	  --sound,   -s   Define which sound do use.
+	  --sound,   -s   Define which sound to use.
 	                  Use "mute" to disable default sound notification.
 	                  Options: Mute, Basso, Blow, Bottle, Frog, Funk, Glass, Hero,
 	                           Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink
