@@ -77,6 +77,6 @@ errorNotifier(cli.input[0], cli.flags)
 		console.log(result.stdout || result.stderr);
 	})
 	.catch(error => {
-		console.log(error.stdout || error.stderr);
+		console.error(error.stdout || error.stderr);
 		process.exit(error.code);
 	});
