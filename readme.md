@@ -8,6 +8,10 @@
 
 > Send native desktop notifications when CLI apps fail
 
+*Technically: if a command exits with an exit code other than `0`*
+
+## Usage
+
 This little CLI comes in handy when writing build scripts.
 
 Let’s imagine you have setup the following npm script for linting your JavaScript files:
@@ -58,7 +62,7 @@ $ npm i -g cli-error-notifier
 
 *It requires Node.js (v4 or greater).*
 
-## Usage
+## Options
 
 ```bash
 $ onerror --help
@@ -91,6 +95,12 @@ $ onerror --help
 
 ## Cross platform compatibility
 This is using the brilliant [node-notifier](https://github.com/mikaelbr/node-notifier) and therefore should work with Notification Center for macOS, notify-osd/libnotify-bin for Linux, Toasters for Windows 8/10, or taskbar Balloons for earlier Windows versions. Growl is used if none of these requirements are met.
+
+## Related
+
+* [onchange](https://github.com/Qard/onchange) - Watch files and folders and run a command when anything is changed.
+* [npm-run-all](https://github.com/mysticatea/npm-run-all) - A CLI tool to run multiple npm-scripts in parallel or sequential.
+
 
 ## License
 
