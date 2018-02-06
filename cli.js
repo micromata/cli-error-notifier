@@ -17,13 +17,13 @@ const cli = meow(`
 	  --message, -m   Sets the message body of the notification.
 	                  Default: "Check the terminal for more information"
 	  --icon,    -i   Sets an icon. Can be any absolute path.
-	  --sound,   -s   Define which sound to use.
+	  --sound,   -s   Defines which sound to use.
 	                  Use "mute" to disable default sound notification.
 	                  Options: Mute, Basso, Blow, Bottle, Frog, Funk, Glass, Hero,
 	                           Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink
 	                  Default: Bottle
-	  --version  -v   Shows the version number.
-	  --help     -h   Shows the help.
+	  --version  -v   Displays the version number.
+	  --help     -h   Displays the help.
 
 	Examples
 	  $ onerror "wget unknown-host.xyz"
