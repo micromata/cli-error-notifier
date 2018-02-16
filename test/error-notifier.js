@@ -8,7 +8,7 @@ test('"Unknown command"', async t => {
 	t.regex(result.stderr, /Hej:.+not found/);
 });
 
-test('"Command which exits with exit code other than 1"', async t => {
+test('"Command which fails with an exit code other than 0"', async t => {
 	const result = await t.throws(errorNotifier('tar'));
 	t.is(result.stdout, '');
 	t.not(result.code, 0);
