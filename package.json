@@ -46,8 +46,8 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "codecov": "^3.0.0",
-    "eslint": "^4.17.0",
-    "eslint-config-xo": "^0.20.0",
+    "eslint": "^4.18.1",
+    "eslint-config-xo": "^0.20.1",
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^4.0.2",
