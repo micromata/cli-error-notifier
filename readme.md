@@ -17,7 +17,7 @@ To use it in your project:
 $ npm install --save-dev cli-error-notifier
 ```
 
-To use it globally;
+To use it globally:
 ```
 $ npm install --global cli-error-notifier
 ```
