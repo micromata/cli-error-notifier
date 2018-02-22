@@ -1,6 +1,6 @@
 {
   "name": "cli-error-notifier",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Sends native desktop notifications if CLI apps fail",
   "license": "MIT",
   "repository": "micromata/cli-error-notifier",
