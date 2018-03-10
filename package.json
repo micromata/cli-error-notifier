@@ -51,6 +51,7 @@
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^4.0.2",
+    "is-semver": "^1.0.8",
     "nsp": "^3.2.1",
     "nyc": "^11.4.1",
     "standard-version": "^4.3.0"
