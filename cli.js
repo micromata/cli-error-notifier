@@ -57,6 +57,14 @@ const cli = meow(`
 
 updateNotifier({pkg}).notify();
 
+if (cli.input.length === 0 && cli.flags.v === true) {
+	cli.showVersion();
+}
+
+if (cli.input.length === 0 && cli.flags.h === true) {
+	cli.showHelp(0);
+}
+
 if (cli.input.length !== 1) {
 	console.log(`\n${logSymbols.error} Invalid input. Please check the help below:`);
 	cli.showHelp();
@@ -64,7 +72,7 @@ if (cli.input.length !== 1) {
 
 if (Object.keys(cli.flags).map(key => typeof cli.flags[key]).some(type => type === 'boolean')) {
 	console.log(`\n${logSymbols.error} Wrong option(s) provided. Please check the help below:`);
-	cli.showHelp(2);
+	cli.showHelp();
 }
 
 errorNotifier(cli.input[0], cli.flags)
