@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.9"></a>
+## [1.0.9](https://github.com/micromata/cli-error-notifier/compare/1.0.8...1.0.9) (2018-03-25)
+
+
+
 <a name="1.0.8"></a>
 ## [1.0.8](https://github.com/micromata/cli-error-notifier/compare/1.0.7...1.0.8) (2018-03-10)
 
