@@ -54,7 +54,7 @@
     "is-semver": "^1.0.8",
     "nsp": "^3.2.1",
     "nyc": "^11.8.0",
-    "standard-version": "^4.3.0"
+    "standard-version": "^4.4.0"
   },
   "nyc": {
     "reporter": [
