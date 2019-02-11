@@ -76,10 +76,6 @@ if (Object.keys(cli.flags).map(key => typeof cli.flags[key]).some(type => type =
 }
 
 errorNotifier(cli.input[0], cli.flags)
-	.then(result => {
-		console.log(result.stdout || result.stderr);
-	})
 	.catch(error => {
-		console.error(error.stdout || error.stderr);
 		process.exit(error.code);
 	});
