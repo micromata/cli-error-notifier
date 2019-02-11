@@ -19,7 +19,7 @@
     "test": "npm run lint && nyc ava",
     "lint": "eslint --cache --ignore-path .gitignore .",
     "lint:fix": "npm run lint --silent -- --fix",
-    "release": "nsp check && standard-version --tag-prefix",
+    "release": "standard-version --tag-prefix",
     "release:patch": "npm run release --silent -- --release-as patch",
     "release:minor": "npm run release --silent -- --release-as minor",
     "release:major": "npm run release --silent -- --release-as major"
@@ -52,7 +52,6 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-unicorn": "^7.1.0",
     "is-semver": "^1.0.8",
-    "nsp": "^3.2.1",
     "nyc": "^13.2.0",
     "standard-version": "^4.4.0"
   },
