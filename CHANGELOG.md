@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/micromata/cli-error-notifier/compare/2.0.1...2.1.0) (2019-02-11)
+
+
+### Bug Fixes
+
+* Update dependencies ([d1527cd](https://github.com/micromata/cli-error-notifier/commit/d1527cd))
+
+
+### Features
+
+* Stream output ([65569d7](https://github.com/micromata/cli-error-notifier/commit/65569d7)), closes [#9](https://github.com/micromata/cli-error-notifier/issues/9)
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/micromata/cli-error-notifier/compare/2.0.0...2.0.1) (2018-05-31)
 
