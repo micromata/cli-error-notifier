@@ -21,7 +21,10 @@ const cli = meow(`
 	                  Use "mute" to disable default sound notification.
 	                  Options: Mute, Basso, Blow, Bottle, Frog, Funk, Glass, Hero,
 	                           Morse, Ping, Pop, Purr, Sosumi, Submarine, Tink
-	                  Default: Bottle
+					  Default: Bottle
+	  --error    -e   A JavaScript code string to customize the content of the
+					  \${error} variable e.g. "error.stderr.substr(0, 9) + '...'"
+					  Default: "error.toString()"
 	  --version  -v   Displays the version number.
 	  --help     -h   Displays the help.
 
@@ -51,6 +54,10 @@ const cli = meow(`
 		sound: {
 			type: 'string',
 			alias: 's'
+		},
+		error: {
+			type: 'string',
+			alias: 'e'
 		}
 	}
 });
