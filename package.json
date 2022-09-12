@@ -7,7 +7,7 @@
   "author": {
     "name": "Michael Kühnel",
     "email": "m.kuehnel@micromata.de",
-    "url": "micromata.de"
+    "url": "https://micromata.de"
   },
   "bin": {
     "onerror": "cli.js"
@@ -17,7 +17,7 @@
   },
   "type": "module",
   "scripts": {
-    "test": "npm run lint && nyc ava",
+    "test": "npm run lint && c8 ava",
     "lint": "eslint --cache --ignore-path .gitignore .",
     "lint:fix": "npm run lint --silent -- --fix",
     "release": "standard-version --tag-prefix",
@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "ava": "^4.3.3",
+    "c8": "^7.12.0",
     "codecov": "^3.8.2",
     "eslint": "^8.23.1",
     "eslint-config-xo": "^0.42.0",
@@ -53,7 +54,6 @@
     "eslint-plugin-security": "^1.5.0",
     "eslint-plugin-unicorn": "^43.0.2",
     "is-semver": "^1.0.10",
-    "nyc": "^15.1.0",
     "standard-version": "^9.5.0"
   },
   "nyc": {
