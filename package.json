@@ -37,23 +37,23 @@
     "notify"
   ],
   "dependencies": {
-    "execa": "^1.0.0",
-    "log-symbols": "^2.2.0",
-    "meow": "^5.0.0",
-    "node-notifier": "^5.2.1",
-    "update-notifier": "^2.5.0"
+    "execa": "^6.1.0",
+    "log-symbols": "^5.1.0",
+    "meow": "^10.1.3",
+    "node-notifier": "^10.0.1",
+    "update-notifier": "^6.0.2"
   },
   "devDependencies": {
-    "ava": "^1.2.1",
-    "codecov": "^3.0.2",
-    "eslint": "^5.13.0",
-    "eslint-config-xo": "^0.26.0",
-    "eslint-plugin-filenames": "^1.2.0",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^7.1.0",
-    "is-semver": "^1.0.8",
-    "nyc": "^13.2.0",
-    "standard-version": "^4.4.0"
+    "ava": "^4.3.3",
+    "codecov": "^3.8.2",
+    "eslint": "^8.23.1",
+    "eslint-config-xo": "^0.42.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "is-semver": "^1.0.10",
+    "nyc": "^15.1.0",
+    "standard-version": "^9.5.0"
   },
   "nyc": {
     "reporter": [
