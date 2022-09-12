@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const logSymbols = require('log-symbols');
-const updateNotifier = require('update-notifier');
 
-const package_ = require('./package.json');
-const errorNotifier = require('./lib/error-notifier');
+import fs from 'node:fs/promises';
+import meow from 'meow';
+import logSymbols from 'log-symbols';
+import updateNotifier from 'update-notifier';
 
+import errorNotifier from './lib/error-notifier.js';
+
+const packageJson = JSON.parse(await fs.readFile('package.json'));
 const cli = meow(
 	`
 	Usage
@@ -33,6 +34,7 @@ const cli = meow(
 	  $ onerror "wget unknown-host.xyz"  -s Glass -i https://cdn.rawgit.com/npm/logos/31945b5c/npm%20square/n-64.png
 `,
 	{
+		importMeta: import.meta,
 		alias: {
 			h: 'help',
 			v: 'version',
@@ -58,7 +60,7 @@ const cli = meow(
 	},
 );
 
-updateNotifier({pkg: package_}).notify();
+updateNotifier({pkg: packageJson}).notify();
 
 if (cli.input.length === 0 && cli.flags.v === true) {
 	cli.showVersion();
@@ -86,6 +88,8 @@ if (
 	cli.showHelp();
 }
 
-errorNotifier(cli.input[0], cli.flags).catch((error) => {
-	process.exit(error.code);
-});
+try {
+	await errorNotifier(cli.input[0], cli.flags);
+} catch (error) {
+	process.exit(error.exitCode);
+}
