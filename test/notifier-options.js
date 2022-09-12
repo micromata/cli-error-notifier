@@ -1,5 +1,5 @@
 import test from 'ava';
-import notifierOptions from '../lib/notifier-options';
+import notifierOptions from '../lib/notifier-options.js';
 
 test('"Default options"', (t) => {
 	const options = notifierOptions({});

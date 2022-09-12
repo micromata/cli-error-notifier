@@ -13,8 +13,9 @@
     "onerror": "cli.js"
   },
   "engines": {
-    "node": ">=6"
+    "node": "^14.16 || >=16.0.0"
   },
+  "type": "module",
   "scripts": {
     "test": "npm run lint && nyc ava",
     "lint": "eslint --cache --ignore-path .gitignore .",
