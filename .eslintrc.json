@@ -1,6 +1,6 @@
 {
   "extends": [
-		"xo/esnext",
+		"xo",
 		"plugin:unicorn/recommended"
 	],
   "plugins": [
