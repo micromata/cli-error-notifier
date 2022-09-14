@@ -1,8 +1,5 @@
 [![npm version](https://img.shields.io/npm/v/cli-error-notifier.svg?style=flat)](https://www.npmjs.org/package/cli-error-notifier)
-[![Build Status](https://travis-ci.org/micromata/cli-error-notifier.svg?branch=master)](https://travis-ci.org/micromata/cli-error-notifier)
 [![Coverage](https://codecov.io/gh/micromata/cli-error-notifier/badge.svg?branch=master)](https://codecov.io/gh/micromata/cli-error-notifier?branch=master)
-[![devDependency Status](https://david-dm.org/micromata/cli-error-notifier/dev-status.svg)](https://david-dm.org/micromata/cli-error-notifier#info=devDependencies)
-[![Dependency Status](https://david-dm.org/micromata/cli-error-notifier/status.svg)](https://david-dm.org/micromata/cli-error-notifier#info=Dependencies)
 
 # cli-error-notifier
 
