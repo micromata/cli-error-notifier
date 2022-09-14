@@ -1,6 +1,26 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 3.0.0 (2022-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Minimum needed Node.js version is 14.16
+
+### Features
+
+* CommonJS to ESM 📦 ([82f74ea](https://github.com/micromata/cli-error-notifier/commit/82f74ea77eedcbbc5d35177d6b767da44e0e7ca2))
+
+### Chores
+
+* Remove broken badges in Readme ([bc3506c2](https://github.com/micromata/cli-error-notifier/commit/bc3506c296a652bc63483ced06570a3174aeee53))
+* Fix coverage report ([49fdb54f](https://github.com/micromata/cli-error-notifier/commit/49fdb54f67930083a52a20055b39e870929be63a))
+* Move from Travis to GitHub actions to run tests ([074f63a3](https://github.com/micromata/cli-error-notifier/commit/074f63a39ef2bf4af97376c0ff0e77118dbe8f57))
+* Fix ESLint config and errors ([218c8f60](https://github.com/micromata/cli-error-notifier/commit/218c8f60294af3c5cb111b14ae8a647f6071f907))
+* Update dependencies ([49a7f88a](https://github.com/micromata/cli-error-notifier/commit/49a7f88a0d5b86d890bcd8f83fee27ff089a8e50))
+
 
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/micromata/cli-error-notifier/compare/2.0.1...2.1.0) (2019-02-11)
