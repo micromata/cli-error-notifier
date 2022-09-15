@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-import fs from 'node:fs/promises';
 import meow from 'meow';
 import logSymbols from 'log-symbols';
 import updateNotifier from 'update-notifier';
 
 import errorNotifier from './lib/error-notifier.js';
 
-const packageJson = JSON.parse(await fs.readFile('package.json'));
 const cli = meow(
 	`
 	Usage
@@ -60,7 +58,7 @@ const cli = meow(
 	},
 );
 
-updateNotifier({pkg: packageJson}).notify();
+updateNotifier({pkg: cli.pkg}).notify();
 
 if (cli.input.length === 0 && cli.flags.v === true) {
 	cli.showVersion();
