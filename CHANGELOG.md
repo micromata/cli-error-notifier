@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.0.1 (2022-09-15)
+
+### Bug Fixes
+
+* Broken updateNotifier ([aacbdc1](https://github.com/micromata/cli-error-notifier/commit/aacbdc1bead1a91ca4e46dab435aec191be0f462))
+
 ## 3.0.0 (2022-09-14)
 
 
